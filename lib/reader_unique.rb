@@ -1,0 +1,3 @@
+class ReaderUnique < Reader
+
+end
