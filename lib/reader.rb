@@ -4,11 +4,13 @@
 class Reader
   def initialize(file_path)
     @file_path = file_path
+    @keyword = 'all'
   end
 
   # Return a sorted list of ALL views.
 
   def show
+    header(@keyword)
     counter(list).each_with_index do |el, index|
       print "#{index + 1} - #{el.first}"
       (20 - el.first.length).times { print '-' }
@@ -38,5 +40,11 @@ class Reader
     views = Hash.new { |hash, key| hash[key] = 0 }
     list.map { |row| views[row[0]] += 1 }
     views.sort_by { |h| h[1] }.reverse
+  end
+
+  def header(type)
+    p '------------------------------------'
+    p "> sorted list of #{type} page views <"
+    p '------------------------------------'
   end
 end

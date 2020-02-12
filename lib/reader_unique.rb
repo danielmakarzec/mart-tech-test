@@ -1,6 +1,7 @@
 class ReaderUnique < Reader
   def initialize(file_path)
     super
+    @keyword = 'unique'
   end
 
   private
