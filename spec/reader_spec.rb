@@ -33,6 +33,7 @@ RSpec.describe Reader do
 
   it 'returns an array of views' do
     expect(Reader.new('./data/webserver.log').show).not_to be_empty
+    expect(Reader.new('./data/webserver.log').show[1]).to include('/contact')
   end
 
   # should return number of views of the given webpage.
