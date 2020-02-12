@@ -41,8 +41,4 @@ RSpec.describe Reader do
   it 'returns a number of views for each page' do
     expect(Reader.new('./data/webserver.log').show[1].last).to eq(89)
   end
-
-# create a ReaderUnique class.
-  # check the class inherete from The Reader.
-  # should return number of unique views of the given webpage.
 end
