@@ -10,6 +10,8 @@ class Reader
 
   def show
     file_correct?(@file_path)
+    file = File.open(@file_path)
+    file.map { |row| row.split(' ') }
   end
 
   # check if the file path is correct
