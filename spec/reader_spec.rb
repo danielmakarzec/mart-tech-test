@@ -8,8 +8,16 @@ RSpec.describe Reader do
         expect(Reader).to be_truthy
       end
     end
+
+    # it schould initialize file path - string.
+
+    context 'initializing new instance of Reader class' do
+      it 'should be initialized with a given file path ' do
+        expect(Reader).to receive(:new).with(instance_of(String))
+          Reader.new('./data/webserver.log')
+      end
+    end
   end
-  # it schould initialize file path - string.
   # check if the file exists.
   # parse the file and return an array of views.
   # should return number of views of the given webpage.
