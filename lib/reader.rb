@@ -11,8 +11,11 @@ class Reader
   def show
     file_correct?(@file_path)
     file = File.open(@file_path)
-    file.map { |row| row.split(' ') }
+    list = file.map { |row| row.split(' ') }
+    counter(list)
   end
+
+  private
 
   # check if the file path is correct
 
@@ -22,4 +25,10 @@ class Reader
 
   # read given file and create a list of views
   # count number of web page views of a given list
+
+  def counter(list)
+    views = Hash.new { |hash, key| hash[key] = 0 }
+    list.map { |row| views[row[0]] += 1 }
+    views.sort_by { |h| h[1] }.reverse
+  end
 end
