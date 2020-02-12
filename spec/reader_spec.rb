@@ -30,6 +30,11 @@ RSpec.describe Reader do
   end
 
   # parse the file and return an array of views.
+
+  it 'returns an array of views' do
+    expect(Reader.new('./data/webserver.log').show).not_to be_empty
+  end
+
   # should return number of views of the given webpage.
 
 # create a ReaderUnique class.
