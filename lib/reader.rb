@@ -9,8 +9,12 @@ class Reader
   # Return a sorted list of ALL views.
 
   def show
-    file_correct?(@file_path)
-    counter(list)
+    counter(list).each_with_index do |el, index|
+      print "#{index + 1} - #{el.first}"
+      (20 - el.first.length).times { print '-' }
+      print "#{el[1]} views"
+      puts
+    end
   end
 
   private
