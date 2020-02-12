@@ -2,16 +2,16 @@
 
 ### Test objectives
 
-1. Write a program that:
+1. Write a program that:</br>
 a. Receives a log file as an argument (webserver.log is
-provided)
-b. Returns the following:
+provided)</br>
+b. Returns the following:</br>
 > list of webpages with most page views ordered from most pages views to less page views
 > list of webpages with most unique page views also ordered
 
 ## Versions
 
-Ruby: '2.6'
+Ruby: '2.6' </br>
 RSpec: '3.9'
 
 ## Tests
